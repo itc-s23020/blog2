@@ -7,14 +7,14 @@ import {
   faGithub
 } from '@fortawesome/free-brands-svg-icons'
 
-export default function Social ({ iconSize = 'initial' }) {
+const Social = ({ iconSize = 'initial' }) => {
   return (
     <ul className={styles.list} style={{ '--icon-size': iconSize }}>
       <li>
-        <a href='https://twitter.com/'>
+        <span href='https://twitter.com/'>
           <FontAwesomeIcon icon={faTwitter} />
           <span className='sr-only'>Twitter</span>
-        </a>
+        </span>
       </li>
       <li>
         <a href='https://www.facebook.com/'>
@@ -31,3 +31,4 @@ export default function Social ({ iconSize = 'initial' }) {
     </ul>
   )
 }
+export default Social
