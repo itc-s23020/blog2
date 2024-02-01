@@ -1,6 +1,7 @@
 import { getPostBySlug } from 'lib/api'
 import Container from 'components/container'
 import PostHeader from 'components/post-header'
+import PostCategories from 'components/post-categories'
 import PostBody from 'components/post-body'
 import {
   TwoColumn,
@@ -32,7 +33,9 @@ const Schedule = ({ title, publish, content, eyecatch, categories }) => {
               <ConvertBody contentHTML={content} />
             </PostBody>
           </TwoColumnMain>
-          <TwoColumnSidebar></TwoColumnSidebar>
+          <TwoColumnSidebar>
+            <PostCategories categories={categories} />
+          </TwoColumnSidebar>
         </TwoColumn>
       </article>
     </Container>
