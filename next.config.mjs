@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  reactStricMode: true,
+  images: {
+    domains: ['images.microcms-assets.io']
+  }
+}
 
-export default nextConfig;
+export default nextConfig
